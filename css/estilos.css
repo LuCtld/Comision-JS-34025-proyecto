@@ -1,0 +1,318 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Bahnschrift";
+  src: url(../assets/font/bahnschrift.ttf);
+}
+@font-face {
+  font-family: "Ethnocentric";
+  src: url(../assets/font/ethnocentric\ rg.otf);
+}
+.fondonavbar {
+  background-color: black;
+  padding: 1%;
+}
+.fondonavbar a {
+  font-family: "Bahnschrift";
+  font-size: small;
+  color: white;
+}
+.fondonavbar a:hover {
+  color: #01C3D1;
+}
+.fondonavbar a:focus {
+  color: gray;
+}
+.fondonavbar .navbar-nav {
+  margin-left: 27%;
+}
+.fondonavbar .btn {
+  background-color: #01C3D1;
+  font-family: "Bahnschrift";
+  color: white;
+}
+.fondonavbar .nav-item {
+  background-color: transparent;
+}
+.fondonavbar .navbar-toggler-icon {
+  background-image: url(../assets/images/menu.png);
+}
+.fondonavbar .carrito {
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+.fondonavbar .carrito .carritoceleste {
+  display: none;
+}
+.fondonavbar .carrito:hover .carritoblanco {
+  display: none;
+}
+.fondonavbar .carrito:hover .carritoceleste {
+  display: inline;
+}
+
+.carrusel {
+  margin-top: 0.5%;
+}
+.carrusel .carousel-indicators {
+  width: 10%;
+  margin-left: 45%;
+}
+.carrusel .carousel-control-prev-icon {
+  width: 10%;
+}
+.carrusel .carousel-control-next-icon {
+  width: 10%;
+}
+
+.container-fluid {
+  background-color: black;
+  margin-top: 0.5%;
+  background-image: url(../assets/images/backconlogo.png);
+}
+.container-fluid .titulos-principales {
+  padding-top: 3%;
+  padding-bottom: 2%;
+  padding-left: 1%;
+  font-family: "Ethnocentric";
+  font-size: xx-large;
+  color: white;
+}
+.container-fluid h2 {
+  font-family: "Bahnschrift";
+  color: white;
+}
+.container-fluid h4 {
+  font-family: "Bahnschrift";
+  color: white;
+  font-size: large;
+}
+.container-fluid p {
+  font-family: "Bahnschrift";
+  color: #01C3D1;
+}
+
+.container-fluid-blanco {
+  background-color: white;
+  margin-top: 0.5%;
+  background-image: url(../assets/images/backconlogoblanco.jpg);
+  justify-content: center;
+}
+
+.container-fluid-negro {
+  background-color: black;
+}
+
+.titulos-principales h3 {
+  padding-top: 3%;
+  padding-bottom: 2%;
+  padding-left: 1%;
+  font-family: "Ethnocentric";
+  font-size: xx-large;
+  color: rgb(99, 99, 99);
+}
+
+.titulos-secundarios {
+  padding-top: 3%;
+  padding-bottom: 2%;
+  padding-left: 1%;
+  font-family: "Bahnschrift";
+  font-size: xx-large;
+  color: white;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+}
+
+.bg,
+.overlay {
+  text-align: center;
+}
+
+img,
+.overlay {
+  transition: 0.3s all;
+}
+
+.bg {
+  position: relative;
+}
+.bg img {
+  width: 100%;
+}
+.bg .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  opacity: 0;
+}
+.bg .overlay h5 {
+  padding-top: 50%;
+  font-family: "Bahnschrift";
+  color: white;
+}
+.bg .overlay p {
+  font-family: "Bahnschrift";
+  color: white;
+}
+.bg:hover .overlay {
+  opacity: 1;
+}
+.bg:hover img {
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
+}
+
+.card {
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 10%;
+  background-color: transparent;
+  border: none;
+}
+
+.video {
+  margin: 3% 3% 3% 3%;
+}
+.video iframe {
+  width: 100%;
+}
+
+.botontabla {
+  margin: 3% 40% 3% 40%;
+}
+
+.footup {
+  padding: 2% 0% 1% 35%;
+}
+.footup p {
+  font-family: "Bahnschrift";
+  color: white;
+}
+
+.footdown {
+  padding: 2% 0% 0% 2%;
+}
+.footdown a {
+  text-decoration: none;
+}
+.footdown h6 {
+  font-family: "Bahnschrift";
+  color: white;
+  margin-top: 5%;
+}
+.footdown p {
+  font-family: "Bahnschrift";
+  color: white;
+  margin-top: 3%;
+}
+.footdown .contactanos {
+  margin-top: 10%;
+}
+.footdown .whatsapp {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.footdown .whatsapp p {
+  padding-left: 2%;
+}
+.footdown .mail {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.footdown .mail p {
+  padding-left: 2%;
+}
+.footdown .ubicacion {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.footdown .ubicacion p {
+  padding-left: 2%;
+}
+.footdown h4 {
+  font-family: "Ethnocentric";
+  color: white;
+  font-size: large;
+  margin-top: 3%;
+}
+.footdown .logofoot {
+  margin-bottom: 5%;
+}
+
+.tituloseccion h3 {
+  font-family: "Bahnschrift";
+  color: white;
+  font-size: xx-large;
+}
+
+.container-fluid-productos {
+  background-color: black;
+  margin-top: 0.5%;
+  background-image: url(../assets/images/backconlogo.png);
+}
+.container-fluid-productos .titulos-principales h3 {
+  padding-top: 3%;
+  padding-bottom: 2%;
+  padding-left: 0%;
+  font-family: "Ethnocentric";
+  font-size: xx-large;
+  color: white;
+}
+.container-fluid-productos h2 {
+  font-family: "Bahnschrift";
+  color: white;
+}
+.container-fluid-productos h4 {
+  font-family: "Bahnschrift";
+  color: white;
+  font-size: large;
+  padding-left: 3%;
+}
+.container-fluid-productos p {
+  font-family: "Bahnschrift";
+  color: rgb(59, 59, 59);
+}
+
+.container-fluid-productos {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+.container-fluid-productos .titulos-principales {
+  margin-top: 2%;
+}
+
+.producto-contenedor {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-left: 0%;
+}
+.producto-contenedor .card {
+  background-color: rgb(233, 233, 233);
+  display: flex;
+  align-content: center;
+  padding: 0%;
+  margin: 1%;
+  text-align: center;
+}
+
+/*# sourceMappingURL=estilos.css.map */
