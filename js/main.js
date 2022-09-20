@@ -97,13 +97,13 @@ const compraDescuento = (totalCompra) => {
 const obtenerPrecioEnvio = (totalCompra) => {
     let confirmaCompra = confirm('Quiere que se lo enviemos a domicilio?');
 
-    if (confirmaCompra === totalCompra > 2500){
+    if ( confirmaCompra && totalCompra > 2500){
         alert('Tenés envio gratis!');
-    } else if (confirmaCompra === totalCompra < 2500 && totalCompra !== 0){
+    } else if (confirmaCompra && totalCompra < 2500 && totalCompra !== 0){
         totalCompra = totalCompra + 500;
         alert('El costo de la compra y costo de envío es $'+totalCompra);
     } else {
-        alert('El total de la compra es $'+totalCompra);
+        alert('Retiras en el local. El total de la compra es $'+totalCompra);
     }
     comoAbona(totalCompra);
 }
@@ -122,7 +122,7 @@ const comoAbona = (totalCompra) => {
         if (cuantasCuotas === 3 || cuantasCuotas === 6 || cuantasCuotas === 12){
 
             let precioCuotas = totalCompra / cuantasCuotas;
-            alert ('Su compra de realizará en '+cuantasCuotas+' de $'+precioCuotas+'. Gracias vuelva pronto!' );
+            alert ('Su compra de realizará en '+cuantasCuotas+' de $'+ precioCuotas +'. Gracias vuelva pronto!' );
 
         }else {
             alert ('No es un numero de cuotas válidas' );
