@@ -19,6 +19,11 @@ const producto3 = new Producto (3, 'winter','free life', 'parafina', 650);
 //Metodo Push
 arrayProductos.push(producto1, producto2, producto3);
 
+//Saludos
+
+const nombreUsuario = prompt('Hola! Ingresa tu nombre');
+let saludoUsuario = prompt('Bienvenido! '+ nombreUsuario);
+
 // Metodo Filter
 const marcaFreeLife = arrayProductos.filter ((free) => free.marca === 'free life');
 console.log (marcaFreeLife);
