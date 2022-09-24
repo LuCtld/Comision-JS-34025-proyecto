@@ -26,11 +26,11 @@
         &:hover{
             color:$color-celeste;
         }
-            
+
 
         &:focus{
             color: gray;
-        }    
+        }
     }
 
     .navbar-nav{
@@ -50,7 +50,7 @@
     .navbar-toggler-icon{
         background-image: url(../assets/images/menu.png);
         }
-    
+
 
     .carrito{
         margin-top: 10%;
@@ -59,7 +59,7 @@
         .carritoceleste{
             display: none;
         }
-        
+
         &:hover{
             .carritoblanco{
                 display: none;
@@ -68,7 +68,7 @@
                 display:inline;
             }
         }
-    
+
     }
 
 }
@@ -129,9 +129,6 @@
     justify-content: center;
 
 }
-.container-fluid-negro{
-    background-color: black;
-}
 
 .titulos-principales{
 
@@ -143,11 +140,11 @@
     font-size:xx-large;
     color: rgb(99, 99, 99);
     }
-    
+
 
 }
 .titulos-secundarios{
-    padding-top: 3%;
+        padding-top: 3%;
         padding-bottom: 2%;
         padding-left: 1%;
         font-family: $tipo-secundaria;
@@ -155,6 +152,10 @@
         color: white;
 
 }
+
+
+
+
 //cards
 
 
@@ -218,15 +219,7 @@ img,
 }
 }
 
-.card{
 
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-bottom: 10%;
-    background-color:transparent;
-    border: none;
-
-}
 
 //videos
 
@@ -318,75 +311,24 @@ img,
 
 }
 
-// cards tienda
+// Tienda
 
-.tituloseccion h3 {
-        font-family: $tipo-secundaria;
-        color: white;
-        font-size: xx-large;
-}
-
-//Productos
 
 .container-fluid-productos{
     background-color: black;
-    margin-top: 0.5%;
-    background-image: url(../assets/images/backconlogo.png);
-
-    .titulos-principales{
-        h3{
-        padding-top: 3%;
-        padding-bottom: 2%;
-        padding-left: 0%;
-        font-family: $tipo-primaria;
-        font-size:xx-large;
-        color: white;
-        }
-    
-    }
-
-    h2{
-        font-family: $tipo-secundaria;
-        color: white;
-    }
-
-
-    h4{
-        font-family: $tipo-secundaria;
-        color: white;
-        font-size:large;
-        padding-left: 3%;
-    }
-
-    p{
-        font-family: $tipo-secundaria;
-        color:rgb(59, 59, 59)
-    }
-
-}
-
-//Carrito
-
-.container-fluid-productos{
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-
-    .titulos-principales{
-        margin-top: 2%;
-    }
-
-}
-
-
-
-.producto-contenedor {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    margin-left: 0%;
+    margin-top: 0%;
+
+
+    .titulos-principales-productos{
+        margin-top: 2%;
+        font-family: $tipo-primaria;
+        font-size:x-large;
+        color: white;
+
+    }
 
     .card{
         background-color: rgb(233, 233, 233);
@@ -395,9 +337,15 @@ img,
         padding: 0%;
         margin:1%;
         text-align: center;
-    } 
-    
-} 
+
+    }
+
+
+}
+
+
+
+
 
 
 

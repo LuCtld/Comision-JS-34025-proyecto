@@ -167,7 +167,6 @@ img,
   opacity: 1;
 }
 .bg:hover img {
-  -webkit-filter: blur(2px);
   filter: blur(2px);
 }
 
@@ -244,25 +243,10 @@ img,
 }
 
 .container-fluid-productos {
-  background-color: black;
   display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  margin-top: 0%;
-}
-.container-fluid-productos .titulos-principales-productos {
-  margin-top: 2%;
-  font-family: "Ethnocentric";
-  font-size: x-large;
-  color: white;
-}
-.container-fluid-productos .card {
-  background-color: rgb(233, 233, 233);
-  display: flex;
-  align-content: center;
-  padding: 0%;
-  margin: 1%;
-  text-align: center;
 }
 
-/*# sourceMappingURL=estilos.css.map */
+.card {
+  background-color: purple;
+  margin-bottom: 10%;
+}/*# sourceMappingURL=estilos.css.map */
