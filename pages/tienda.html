@@ -41,7 +41,11 @@
                             <a class="nav-link" href="#">Videos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="registro.html">Registrate</a>
+                            <button class="nav-link"  id="open"  href="#">Carrito
+                                <i class="fa-solid fa-cart-shopping">
+                                </i>
+                                <span id="contador-carrito">0</span>
+                            </button>
                         </li>
                         </ul>
                         <form class="d-flex" role="search">
@@ -97,16 +101,17 @@
 
     <main id="producto-contenedor" class="container-fluid-productos">
 
-        <div id="carrito-contenedor"></div>
 
-<!-- <div class="modal-container" id="modal_container">
-            <div class="modal-carrito">
-                <h3>Carrito</h3>
-                <button id="cerrar"> Cerrar </button>
-                <div id="carrito-contenedor"></div>
+
+            <div class="modal-container" id="modal_container">
+                <div class="modal-carrito">
+                    <h3>Carrito</h3>
+                    <button id="cerrar"> Cerrar </button>
+                    <div id="carrito-contenedor"></div>
+                </div>
             </div>
-        </div>
--->
+
+
 
 
     </main>
@@ -114,10 +119,11 @@
 
 
     <script src="../libs/bootstrap/js/bootstrap.min.js"></script>
-    <script src="../js/carritoIndex.js" type="module"></script>
     <script src="../js/stock.js" type="module"></script>
     <script src="../js/main.js" type="module"></script>
-    
+    <script src="../js/modal.js" type="module"></script>
+    <script src="../js/carritoIndex.js" type="module"></script>
+
 
 
 </body>

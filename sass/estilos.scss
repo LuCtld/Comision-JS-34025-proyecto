@@ -343,6 +343,51 @@ img,
 
 }
 
+/* Modal */
+.modal-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    width: 100%;
+    margin-top: -20%;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+    position: fixed;
+    z-index: 100;
+
+}
+
+/* hacer visible el modal  */
+.modal-active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 100;
+}
+
+.modal-carrito {
+    padding: 2%;
+    width: 15rem;
+    height: 30rem;
+    font-size: small;
+    line-height: 80%;
+    background-color: rgb(190, 190, 190);
+
+}
+
+.modal-carrito button {
+    padding: 4px;
+    margin-left: 75%;
+    font-size: small;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    border-left: none;
+
+    border: none;
+}
+
+
 
 
 
