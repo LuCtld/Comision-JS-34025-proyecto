@@ -30,3 +30,7 @@ const mostrarProductos = (productos) => {
     })
 }
 mostrarProductos(productos)
+
+
+
+localStorage.setItem("Bienvenidas","Hola");
