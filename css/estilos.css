@@ -103,6 +103,10 @@
   justify-content: center;
 }
 
+.container-fluid-negro {
+  background-color: rgb(0, 0, 0);
+}
+
 .titulos-principales h3 {
   padding-top: 3%;
   padding-bottom: 2%;
@@ -169,6 +173,10 @@ img,
 .bg:hover img {
   -webkit-filter: blur(2px);
   filter: blur(2px);
+}
+
+.card-index {
+  margin-bottom: 5%;
 }
 
 .video {
