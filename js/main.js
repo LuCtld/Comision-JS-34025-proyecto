@@ -1,5 +1,8 @@
-import {productos} from "./stock.js"
-import {carritoIndex} from "./carritoIndex.js"
+import {productos} from "./stock.js";
+import {carritoIndex} from "./carritoIndex.js";
+import { validarProductoRepetido } from "./accionesCarrito.js"
+
+
 
 
 const mostrarProductos = (productos) => {
@@ -21,16 +24,14 @@ const mostrarProductos = (productos) => {
                         `
     contenedorProductos.appendChild(div)
 
-    const boton = document.getElementById(`boton${producto.id}`)
-
-    boton.addEventListener('click', ()=>{
-        carritoIndex(producto.id)
-        alert(`Se agregó: ${producto.nombre}`)
+    const boton = document.getElementById(`boton${producto.id}`);
+    boton.addEventListener('click', () => {
+        validarProductoRepetido(producto.id);
     })
     })
 }
-mostrarProductos(productos)
+
+export {mostrarProductos};
 
 
 
-localStorage.setItem("Bienvenidas","Hola");

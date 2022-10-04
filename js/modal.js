@@ -18,6 +18,6 @@ modalContenedor.addEventListener('click', () => {
     cerrarCarrito.click();
 })
 
-modalCarrito.addEventListener('click', (e) => {
-    e.stopPropagation();
-})
+//modalCarrito.addEventListener('click', (e) => {
+//    e.stopPropagation();
+//})

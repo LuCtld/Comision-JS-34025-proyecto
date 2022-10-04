@@ -280,19 +280,21 @@ img,
   justify-content: center;
   background-color: transparent;
   width: 100%;
-  margin-top: -20%;
+  margin-top: -40%;
   visibility: hidden;
   transition: opacity 0.3s ease;
   border-radius: 10px;
   position: fixed;
   z-index: 100;
+  transition: all 0.5s;
+  opacity: 0;
 }
 
 /* hacer visible el modal  */
 .modal-active {
   opacity: 1;
   visibility: visible;
-  z-index: 100;
+  z-index: 5;
 }
 
 .modal-carrito {
