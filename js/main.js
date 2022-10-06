@@ -1,6 +1,7 @@
-import {productos} from "./stock.js";
+
 import {carritoIndex} from "./carritoIndex.js";
 import { validarProductoRepetido } from "./accionesCarrito.js"
+
 
 
 

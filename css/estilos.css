@@ -274,6 +274,7 @@ img,
 }
 
 /* Modal */
+/* Modal */
 .modal-container {
   display: flex;
   align-items: center;
@@ -299,18 +300,33 @@ img,
 
 .modal-carrito {
   padding: 2%;
-  width: 15rem;
-  height: 30rem;
+  margin-top: -5%;
+  margin-bottom: 5%;
+  width: 30%;
   font-size: small;
   line-height: 80%;
-  background-color: rgb(190, 190, 190);
+  background-color: rgb(218, 216, 216);
   border-radius: 10px;
+  position: relative;
+}
+
+.productoEnCarrito {
+  border-left: 3px solid lightblue;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+  margin: 5px 0;
+  padding: 5px 5px;
+}
+
+.productoEnCarrito:hover {
+  border-left: 5px solid #01C3D1;
 }
 
 .modal-carrito button {
   padding: 4px;
   margin-left: 75%;
-  padding: 2%;
+  padding: 1%;
   font-size: small;
   color: white;
   background-color: rgb(10, 135, 167);

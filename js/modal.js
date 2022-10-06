@@ -1,3 +1,5 @@
+import { eliminarProductoCarrito } from "./accionesCarrito.js";
+
 const modalContenedor = document.querySelector('.modal-container');
 
 const abrirCarrito =  document.getElementById('open');
@@ -18,6 +20,10 @@ modalContenedor.addEventListener('click', () => {
     cerrarCarrito.click();
 })
 
-//modalCarrito.addEventListener('click', (e) => {
-//    e.stopPropagation();
-//})
+modalCarrito.addEventListener('click', (e) => {
+    e.stopPropagation();
+
+    if (e.target.classList.contains('boton-eliminar')) {
+        eliminarProductoCarrito(e.target.value)
+    };
+});
