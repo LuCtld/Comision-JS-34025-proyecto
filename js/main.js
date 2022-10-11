@@ -28,6 +28,7 @@ const mostrarProductos = (productos) => {
     const boton = document.getElementById(`boton${producto.id}`);
     boton.addEventListener('click', () => {
         validarProductoRepetido(producto.id);
+
     })
     })
 }

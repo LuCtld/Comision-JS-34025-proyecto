@@ -41,19 +41,6 @@
 .fondonavbar .navbar-toggler-icon {
   background-image: url(../assets/images/menu.png);
 }
-.fondonavbar .carrito {
-  margin-top: 10%;
-  margin-bottom: 5%;
-}
-.fondonavbar .carrito .carritoceleste {
-  display: none;
-}
-.fondonavbar .carrito:hover .carritoblanco {
-  display: none;
-}
-.fondonavbar .carrito:hover .carritoceleste {
-  display: inline;
-}
 
 .carrusel {
   margin-top: 0.5%;
@@ -345,6 +332,29 @@ img,
 }
 .boton-carrito:hover {
   background-color: rgb(10, 135, 167);
+}
+
+.text {
+  font-family: "Bahnschrift";
+  font-size: larger;
+  color: azure;
+}
+
+.form-control {
+  margin-bottom: 1%;
+  margin-top: 1%;
+}
+
+.btn-form {
+  padding: 1%;
+  border-radius: 10px;
+  background-color: blueviolet;
+  color: azure;
+  margin-bottom: 3%;
+}
+.btn-form:hover {
+  background-color: rgb(52, 16, 85);
+  color: azure;
 }
 
 /*# sourceMappingURL=estilos.css.map */

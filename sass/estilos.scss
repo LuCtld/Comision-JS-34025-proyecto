@@ -52,25 +52,6 @@
         }
 
 
-    .carrito{
-        margin-top: 10%;
-        margin-bottom: 5%;
-
-        .carritoceleste{
-            display: none;
-        }
-
-        &:hover{
-            .carritoblanco{
-                display: none;
-            }
-            .carritoceleste{
-                display:inline;
-            }
-        }
-
-    }
-
 }
 
 //Index
@@ -433,3 +414,28 @@ img,
         }
 }
 
+// Registro
+
+.text{
+
+    font-family:$tipo-secundaria ;
+    font-size:larger;
+    color: azure;
+}
+
+.form-control{
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+.btn-form  {
+    padding: 1%;
+    border-radius: 10px;
+    background-color: blueviolet;
+    color: azure;
+    margin-bottom: 3%;
+    &:hover {
+        background-color: rgb(52, 16, 85);
+        color: azure;
+    }
+}
