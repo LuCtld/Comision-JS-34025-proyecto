@@ -4,4 +4,5 @@ const consultaNews = prompt('Bienvenido Point Norte Surf Shop! ya te encuentras 
 
 
 let registrate  = (consultaNews == 'si')  ? alert('Nos alegra que regreses!') : alert('Puedes registrarte y recibir nuestro Newsletter con novedades y promociones!');
+ 
 

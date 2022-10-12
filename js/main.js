@@ -29,12 +29,14 @@ const mostrarProductos = (productos) => {
     boton.addEventListener('click', () => {
         validarProductoRepetido(producto.id);
         Toastify({
-            text:'Agregaste al carrito!',
-            duration: 3000,
-
+            text:'Se ha agregado al Carrito!',
+            duration: 2000,
+            style:{
+                background:'#A53692'
+            }
         }).showToast();
-
     })
+
     })
 }
 
