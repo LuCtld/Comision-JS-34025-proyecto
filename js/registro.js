@@ -1,6 +1,5 @@
 
-//Formulario
- const datosFormulario = [];
+//Formulario de Registro NewsLetter
 
 const formulario = () => {
 
@@ -13,34 +12,21 @@ const formulario = () => {
         <div class="row">
         <div class="col-md-12">
             <div class="well well-sm">
-                <form class="form-horizontal" method="get" action=>
+                <form id="contact_form" class="form-horizontal" method="get" action=>
                     <fieldset>
                         <legend class="text">Subscripcion NewsLetter</legend>
 
                         <div class="form-group">
                             <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
                             <div class="col-md-8">
-                                <input id="fname" name="name" type="text" placeholder="Nombre" class="form-control" >
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
-                            <div class="col-md-8">
-                                <input id="lname" name="name" type="text" placeholder="Apellido" class="form-control">
+                                <input id="user_name" name="name" type="text" placeholder="Nombre" class="form-control" >
                             </div>
                         </div>
 
                         <div class="form-group">
                             <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
                             <div class="col-md-8">
-                                <input id="email" name="email" type="text" placeholder="Mail" class="form-control" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-phone-square bigicon" ></i></span>
-                            <div class="col-md-8">
-                                <input id="phone" name="phone" type="text" placeholder="Teléfono" class="form-control" >
+                                <input id="user_email" name="email" type="text" placeholder="Mail" class="form-control" required>
                             </div>
                         </div>
 
@@ -65,27 +51,47 @@ const formulario = () => {
 
         contenedorFormulario.appendChild(div);
 
-
-
-            const enviado= document.getElementById("enviado");
-
-            enviado.addEventListener ('click', () =>{
-                Swal.fire({
-                    icon:'success',
-                    title:'Enviado',
-                    text:'Su formulario ha sido enviado',
-                    timer : 4000,
-                    position: top,
-                    imageWith: 600,
-                    imageHeigth: 400,
-                    background: "url(../assets/images/alertfondo.png)"
-                });
-            })
-
-
-
 }
 
-
-
 formulario();
+
+const contactForm = document.getElementById('contact_form');
+const userName = document.getElementById('user_name');
+const userEmail = document.getElementById('user_email');
+const message = document.getElementById('message');
+
+const sendEmail = async (body) => {
+    const settings = {
+        method:'POST',
+        headers: {
+            'content-Type' : 'application/json'
+        },
+        body: JSON.stringify(body),
+    }
+    const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', settings);
+    const data = await response.json();
+    return data;
+};
+
+contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const body = {
+        service_id: 'service_dimtw01',
+        template_id: 'template_kvfony2',
+        user_id: 'EQMyWs_9IN9VaQGrD',
+        template_params: {
+            'to_name': userName.value,
+            'from_name': userEmail.value,
+            'message': message.value
+        }
+    };
+
+    sendEmail (body)
+    .then((response)=>{
+        console.log(response.text());
+    }).catch((error)=>{
+        console.log(error);
+
+    })
+});

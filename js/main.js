@@ -1,13 +1,14 @@
-
-import {carritoIndex} from "./carritoIndex.js";
 import { validarProductoRepetido } from "./accionesCarrito.js"
+import { obtenerProductos } from "./obtenerproductos.js";
 
 
 
 //Mostrar productos
 
-const mostrarProductos = (productos) => {
+const mostrarProductos = async () => {
     const contenedorProductos = document.getElementById("producto-contenedor")
+
+    const productos = await obtenerProductos();
 
     productos.forEach(producto => {
         const div = document.createElement("div")
@@ -27,16 +28,15 @@ const mostrarProductos = (productos) => {
 
     const boton = document.getElementById(`boton${producto.id}`);
     boton.addEventListener('click', () => {
-        validarProductoRepetido(producto.id);
-        Toastify({
-            text:'Se ha agregado al Carrito!',
-            duration: 2000,
-            style:{
-                background:'#A53692'
-            }
-        }).showToast();
-    })
-
+            validarProductoRepetido(producto.id);
+            Toastify({
+                text:'Se ha agregado al Carrito!',
+                duration: 2000,
+                style:{
+                    background:'#A53692'
+                }
+            }).showToast();
+        })
     })
 }
 

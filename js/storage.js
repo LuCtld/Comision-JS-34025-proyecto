@@ -1,3 +1,6 @@
+
+// Utilizando JSON
+
 //Guardar
 
 const guardarCarritoStorage = ( carritoDeCompras ) => {
