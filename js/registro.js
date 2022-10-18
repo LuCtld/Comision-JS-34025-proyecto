@@ -64,7 +64,7 @@ const sendEmail = async (body) => {
     const settings = {
         method:'POST',
         headers: {
-            'content-Type' : 'application/json'
+            'Content-Type' : 'application/json'
         },
         body: JSON.stringify(body),
     }
@@ -77,9 +77,9 @@ contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const body = {
-        service_id: 'service_dimtw01',
-        template_id: 'template_kvfony2',
-        user_id: 'EQMyWs_9IN9VaQGrD',
+        service_id: 'service_thvmv68',
+        template_id: 'template_2ieloo9',
+        user_id: 'POji759wU0J6OjhnR',
         template_params: {
             'to_name': userName.value,
             'from_name': userEmail.value,
@@ -90,8 +90,17 @@ contactForm.addEventListener('submit', (e) => {
     sendEmail (body)
     .then((response)=>{
         console.log(response.text());
-    }).catch((error)=>{
-        console.log(error);
+        Swal.fire({
+            icon: 'success',
+            title: 'Enviado!',
+            text: 'Tu mensaje ha sido enviado, te responderemos en breve!',
+
+        }).catch((error) => {
+            console.log(error)
+
+
+        })
+
 
     })
 });
