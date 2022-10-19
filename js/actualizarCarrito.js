@@ -1,5 +1,5 @@
 
-import { productos } from "./stock.js"
+//import { productos } from "./stock.js"
 import{validarProductoRepetido} from "./accionesCarrito.js"
 import{agregarAlCarrito} from "./accionesCarrito.js"
 import { guardarCarritoStorage } from "./storage.js";

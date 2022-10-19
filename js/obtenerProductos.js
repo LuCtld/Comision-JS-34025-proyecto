@@ -1,13 +1,15 @@
 //Obtener Stock con Fetch
 
+const productos = '../js/data/stock.json';
+
 const obtenerProductos = async () => {
     try {
-        const response = await fetch('../js/data/stock.json');
+        const response = await fetch(productos);
         const data = await response.json();
 
         return data;
     } catch (error) {
-        console.log('Ha ocurrido un erros', error);
+        console.log('Ha ocurrido un error', error);
 
     }
 
