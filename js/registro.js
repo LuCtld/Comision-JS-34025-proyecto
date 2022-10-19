@@ -60,18 +60,20 @@ const userName = document.getElementById('user_name');
 const userEmail = document.getElementById('user_email');
 const message = document.getElementById('message');
 
+
 const sendEmail = async (body) => {
     const settings = {
         method:'POST',
         headers: {
-            'Content-Type' : 'application/json'
+            'Content-Type': 'application/json',
         },
         body: JSON.stringify(body),
-    }
+    };
     const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', settings);
     const data = await response.json();
     return data;
 };
+
 
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -87,8 +89,7 @@ contactForm.addEventListener('submit', (e) => {
         }
     };
 
-    sendEmail (body)
-    .then((response)=>{
+    sendEmail (body).then((response)=>{
         console.log(response.text());
         Swal.fire({
             icon: 'success',
@@ -103,4 +104,4 @@ contactForm.addEventListener('submit', (e) => {
 
 
     })
-});
+});  
