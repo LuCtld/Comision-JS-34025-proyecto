@@ -1,5 +1,5 @@
 import { validarProductoRepetido } from "./accionesCarrito.js"
-import { obtenerProductos } from "./obtenerproductos.js";
+import { obtenerProductos } from "./obtenerProductos.js"
 
 
 
