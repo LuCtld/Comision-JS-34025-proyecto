@@ -101,7 +101,6 @@ contactForm.addEventListener('submit', (e) => {
             background: "url(../assets/images/alertfondo.png)"
 
         })
-
         }).catch((error) => {
             console.log(error);
             Swal.fire({
@@ -110,7 +109,6 @@ contactForm.addEventListener('submit', (e) => {
                 text: 'Tu mensaje NO ha sido enviado, intenta de nuevo!',
                 background: "url(../assets/images/alertfondo.png)"
             })
-
     })
 })
 
