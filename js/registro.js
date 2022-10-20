@@ -70,13 +70,14 @@ const sendEmail = async (body) => {
         body: JSON.stringify(body),
     };
     const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', settings);
-    const data = await response.json();
-    return data;
+
+    return response
 };
 
 
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
+
 
     const body = {
         service_id: 'service_thvmv68',
@@ -89,19 +90,27 @@ contactForm.addEventListener('submit', (e) => {
         }
     };
 
-    sendEmail (body).then((response)=>{
+    sendEmail (body)
+    .then((response)=>{
         console.log(response.text());
+        contactForm.reset()
         Swal.fire({
             icon: 'success',
             title: 'Enviado!',
             text: 'Tu mensaje ha sido enviado, te responderemos en breve!',
-
-        }).catch((error) => {
-            console.log(error)
-
+            background: "url(../assets/images/alertfondo.png)"
 
         })
 
+        }).catch((error) => {
+            console.log(error);
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops!',
+                text: 'Tu mensaje NO ha sido enviado, intenta de nuevo!',
+                background: "url(../assets/images/alertfondo.png)"
+            })
 
     })
-});  
+})
+
