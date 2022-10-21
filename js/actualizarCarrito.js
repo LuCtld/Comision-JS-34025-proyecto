@@ -1,5 +1,5 @@
 
-//import { productos } from "./stock.js"
+import { productos } from "./stock.js"
 import { obtenerProductos } from "./obtenerProductos.js"
 import{validarProductoRepetido} from "./accionesCarrito.js"
 import{agregarAlCarrito} from "./accionesCarrito.js"
