@@ -1,15 +1,15 @@
 //Toastify
 
-const mareas = document.getElementById('mareas');
+const olas = document.getElementById('olas');
 
-mareas.addEventListener('click', () => {
+olas.addEventListener('click', () => {
     Toastify({
-        text:'Click para conocer el pronostico de Mareas!',
+        text:'Click para conocer el pronostico de Olas!',
         duration: 3000,
         style:{
             background:'#A53692'
         },
-        destination: 'https://tablademareas.com/ar/buenos-aires/mar-del-plata',
+        destination: 'https://www.surfline.com/',
         newWindiw: true,
     }).showToast();
 

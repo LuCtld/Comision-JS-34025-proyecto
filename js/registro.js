@@ -14,7 +14,7 @@ const formulario = () => {
             <div class="well well-sm">
                 <form id="contact_form" class="form-horizontal" method="get" action=>
                     <fieldset>
-                        <legend class="text">Subscripcion NewsLetter</legend>
+                        <legend class="text">Envianos tu Mensaje</legend>
 
                         <div class="form-group">
                             <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>

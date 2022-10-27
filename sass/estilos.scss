@@ -82,7 +82,7 @@
         font-family: $tipo-primaria;
         font-size:xx-large;
         color: white;
-    
+
     }
 
     h2{
@@ -123,27 +123,23 @@
     padding-bottom: 2%;
     padding-left: 1%;
     font-family: $tipo-primaria;
-    font-size:xx-large;
+    font-size:x-large;
     color: rgb(99, 99, 99);
     }
 
 
 }
 .titulos-secundarios{
-        padding-top: 3%;
+        padding-top: 1%;
         padding-bottom: 2%;
         padding-left: 1%;
         font-family: $tipo-secundaria;
-        font-size:xx-large;
+        font-size:large;
         color: white;
 
 }
 
-
-
-
 //cards
-
 
 $bg: rgba(0, 0, 0, 0.6);
 
@@ -189,6 +185,9 @@ img,
     font-family:$tipo-secundaria;
     color: white;
     }
+    a{
+    text-decoration: none;
+    }
     p {
         font-family:$tipo-secundaria;
         color: white;
@@ -207,6 +206,17 @@ img,
 
 .card-index{
     margin-bottom: 5%;
+
+}
+
+.card{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-content: center;
+    padding: 0%;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    text-align: center;
 
 }
 
@@ -320,7 +330,7 @@ img,
     }
 
     .card{
-        background-color: rgb(233, 233, 233);
+        background-color: rgb(255, 255, 255);
         display: flex;
         align-content: center;
         padding: 0%;
@@ -358,7 +368,7 @@ img,
     opacity: 1;
     visibility: visible;
     z-index: 5;
-    
+
 }
 
 .modal-carrito {
@@ -439,3 +449,20 @@ img,
         color: azure;
     }
 }
+
+// Mareas
+
+.container-mareas{
+    background-color: rgb(30, 31, 31);
+    width: 100%;
+    font-family: $tipo-secundaria;
+
+    display: flex;
+    align-items: center;
+
+    a{
+        color: white;
+    }
+}
+
+
