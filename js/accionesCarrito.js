@@ -1,4 +1,4 @@
-import { actualizarTotalesCarrito } from "./actualizarCarrito.js";
+import { actualizarTotalesCarrito} from "./actualizarCarrito.js";
 import { productos } from "./stock.js";
 import { obtenerProductos } from "./obtenerProductos.js"
 import { obtenerCarritoStorage } from './storage.js';
@@ -68,6 +68,7 @@ const pintarCarrito = (carrito) => {
                         `;
         contenedor.appendChild(div);
     });
+
 };
 
 
@@ -109,7 +110,22 @@ const eliminarProductoCarrito = (productoId) => {
     })
 };
 
+// Finalizar Compra
 
+const finalizarCompra = document.querySelector('.finalizar')
+    finalizarCompra.addEventListener('click', () => {
+        const contenedor = document.getElementById('carrito-contenedor');
+        contenedor.innerHTML = '';
+
+
+    Swal.fire({
+        title: 'Gracias!',
+        text: 'Tu compra ha sido realizada',
+        icon:'success',
+        position: top,
+        background: "url(../assets/images/alertfondo.png)"
+    })
+})
 
 
 
