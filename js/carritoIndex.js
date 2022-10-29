@@ -19,15 +19,11 @@ export const carritoIndex = (productoId) =>{
 
         div.classList.add("productoCarrito")
         div.innerHTML= `<p>${producto.nombre}</p>
-                        <p>Precio: $${producto.precio}</p> 
+                        <p>Precio: $${producto.precio}</p>
                         <p id="cantidad${producto.id}">Cantidad: ${producto.cantidad}</p>
                         `
         contenedorCarrito.appendChild(div)
 
-
-
-
     }
     renderProductosCarrito()
-
 }

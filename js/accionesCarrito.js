@@ -107,9 +107,10 @@ const eliminarProductoCarrito = (productoId) => {
 
         }
     })
-
-
-
 };
+
+
+
+
 
 export { agregarAlCarrito, validarProductoRepetido, pintarCarrito, eliminarProductoCarrito };

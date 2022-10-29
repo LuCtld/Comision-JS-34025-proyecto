@@ -1,4 +1,4 @@
-
+/* 
 
 const mareas = () => {
     const contenedorMareas = document.getElementById('contenedor-mareas');
@@ -79,4 +79,4 @@ const mareas = () => {
 
 }
 
-mareas();
+mareas(); */

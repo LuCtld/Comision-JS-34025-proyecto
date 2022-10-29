@@ -452,17 +452,39 @@ img,
 
 // Mareas
 
-.container-mareas{
-    background-color: rgb(30, 31, 31);
+#navmareas{
+    background-color: rgb(0, 82, 82);
     width: 100%;
     font-family: $tipo-secundaria;
-
     display: flex;
     align-items: center;
 
+    .navbar-brand{
+        font-family: $tipo-primaria;
+        font-size:xx-large;
+        color: white;
+        margin-left: 1%;
+        margin-right: 10%;
+
+    }
+
     a{
         color: white;
+        &:hover{
+            color:$color-celeste;
+        }
+
+
+        &:focus{
+            color: gray;
+        }
     }
+}
+
+.imagen-marea{
+    margin-left: 20%;
+    margin-top: 3%;
+    margin-bottom: 3%;
 }
 
 
