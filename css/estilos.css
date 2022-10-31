@@ -307,7 +307,7 @@ img,
   line-height: 80%;
   background-color: rgb(218, 216, 216);
   border-radius: 10px;
-  position: relative;
+  overflow-y: scroll;
 }
 
 .productoEnCarrito {

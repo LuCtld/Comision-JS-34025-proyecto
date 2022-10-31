@@ -8,6 +8,7 @@ import { obtenerCarritoStorage } from './storage.js';
 
 let carrito = [];
 
+// Valida productos
 
 const validarProductoRepetido = (productoId) => {
 
@@ -33,6 +34,8 @@ const validarProductoRepetido = (productoId) => {
     }
 };
 
+// Agregar al Carrito
+
 const agregarAlCarrito = (productoId) => {
     const contenedor = document.getElementById('carrito-contenedor');
     const producto = productos.find(producto => producto.id === productoId);
@@ -52,6 +55,7 @@ const agregarAlCarrito = (productoId) => {
 };
 
 // Pintar en el carrito
+
 const pintarCarrito = (carrito) => {
     const contenedor = document.getElementById('carrito-contenedor');
 
@@ -71,6 +75,7 @@ const pintarCarrito = (carrito) => {
 
 };
 
+// Eliminar productos del Carrito
 
 const eliminarProductoCarrito = (productoId) => {
     const carritoStorage = obtenerCarritoStorage();
@@ -110,22 +115,50 @@ const eliminarProductoCarrito = (productoId) => {
     })
 };
 
-// Finalizar Compra
 
-const finalizarCompra = document.querySelector('.finalizar')
-    finalizarCompra.addEventListener('click', () => {
-        const contenedor = document.getElementById('carrito-contenedor');
-        contenedor.innerHTML = '';
+// Boton de finalizar compra
 
+const finalizarBoton = document.getElementById('finalizar');
 
+finalizarBoton.addEventListener('click', () => {
     Swal.fire({
-        title: 'Gracias!',
-        text: 'Tu compra ha sido realizada',
-        icon:'success',
+        title: 'COMPRAR',
+        text: 'Desea concretar la compra?',
+        icon:'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085b6',
+        cancelButtonColor: '#A50CA8',
+        confirmButtonText:'Si, comprar!',
+        cancelButtonText:'No aún',
         position: top,
+        imageWith: 600,
+        imageHeigth: 400,
         background: "url(../assets/images/alertfondo.png)"
+
+    }).then((result)=>{
+        if(result.isConfirmed){
+            while (carrito.length > 0) {
+                carrito.pop()
+            }
+            Swal.fire({
+                title: 'Felicitaciones!',
+                text: 'Su compra ha sido realizada',
+                icon:'success',
+                position: top,
+                imageWith: 600,
+                imageHeigth: 400,
+                background: "url(../assets/images/alertfondo.png)"
+                })
+                actualizarTotalesCarrito(carrito)
+        pintarCarrito(carrito)
+        }
+
     })
 })
+
+
+
+
 
 
 
