@@ -1,0 +1,25 @@
+@media (max-width: 420px) {
+
+    .modal-carrito {
+        width: 70%;
+    }
+
+}
+
+@media (max-width: 576px){
+    .modal-carrito {
+        width: 70%;
+    }
+}
+
+@media (max-width: 768px){
+    .modal-carrito {
+        width: 70%;
+    }
+}
+
+@media (max-width: 992px){
+    .modal-carrito {
+        width: 50%;
+    }
+}

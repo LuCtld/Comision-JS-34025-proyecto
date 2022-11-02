@@ -137,7 +137,7 @@ finalizarBoton.addEventListener('click', () => {
 
     }).then((result)=>{
         if(result.isConfirmed){
-            while (carrito.length > 0) {
+           while (carrito.length > 0) {
                 carrito.pop()
             }
             Swal.fire({
@@ -150,15 +150,11 @@ finalizarBoton.addEventListener('click', () => {
                 background: "url(../assets/images/alertfondo.png)"
                 })
                 actualizarTotalesCarrito(carrito)
-        pintarCarrito(carrito)
+        pintarCarrito(carrito) 
         }
 
     })
 })
-
-
-
-
 
 
 

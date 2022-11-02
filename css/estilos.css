@@ -300,14 +300,13 @@ img,
 
 .modal-carrito {
   padding: 2%;
-  margin-top: -5%;
+  margin-top: -1%;
   margin-bottom: 5%;
-  width: 30%;
+  width: 40%;
   font-size: small;
   line-height: 80%;
   background-color: rgb(218, 216, 216);
   border-radius: 10px;
-  overflow-y: scroll;
 }
 
 .productoEnCarrito {
