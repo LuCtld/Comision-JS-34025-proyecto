@@ -85,6 +85,7 @@ const eliminarProductoCarrito = (productoId) => {
         title: 'Estas seguro?',
         text: 'Estas seguro que quieres eliminar el producto?',
         icon:'warning',
+        iconColor:'#A50CA8',
         showCancelButton: true,
         confirmButtonColor: '#3085b6',
         cancelButtonColor: '#A50CA8',
@@ -104,6 +105,7 @@ const eliminarProductoCarrito = (productoId) => {
                 title: 'Eliminado',
                 text: 'El producto ha sido eliminado',
                 icon:'success',
+                iconColor:'#A50CA8',
                 position: top,
                 imageWith: 600,
                 imageHeigth: 400,
@@ -121,39 +123,61 @@ const eliminarProductoCarrito = (productoId) => {
 const finalizarBoton = document.getElementById('finalizar');
 
 finalizarBoton.addEventListener('click', () => {
-    Swal.fire({
-        title: 'COMPRAR',
-        text: 'Desea concretar la compra?',
-        icon:'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085b6',
-        cancelButtonColor: '#A50CA8',
-        confirmButtonText:'Si, comprar!',
-        cancelButtonText:'No aún',
-        position: top,
-        imageWith: 600,
-        imageHeigth: 400,
-        background: "url(../assets/images/alertfondo.png)"
+    if (carrito.length === 0) {
 
-    }).then((result)=>{
-        if(result.isConfirmed){
-           while (carrito.length > 0) {
-                carrito.pop()
+        Swal.fire({
+            title: 'Oups!',
+            text: "Tu carrito esta vacio!",
+            icon: 'warning',
+            iconColor:'#A50CA8',
+            confirmButtonColor: '#3085b6',
+            cancelButtonColor: '#A50CA8',
+            confirmButtonText: 'Ok!',
+            background: "url(../assets/images/alertfondo.png)"
+          })
+
+
+    } else if (carrito.length > 0) {
+        Swal.fire({
+            title: 'COMPRAR',
+            text: 'Desea concretar la compra?',
+            icon:'warning',
+            iconColor:'#A50CA8',
+            showCancelButton: true,
+            confirmButtonColor: '#3085b6',
+            cancelButtonColor: '#A50CA8',
+            confirmButtonText:'Si, comprar!',
+            cancelButtonText:'No aún',
+            position: top,
+            imageWith: 600,
+            imageHeigth: 400,
+            background: "url(../assets/images/alertfondo.png)"
+
+        }).then((result)=>{
+            if(result.isConfirmed){
+                while (carrito.length > 0) {
+                    carrito.pop()
+                }
+                Swal.fire({
+                    title: 'Felicitaciones!',
+                    text: 'Tu pedido ha sido enviado',
+                    icon:'success',
+                    iconColor:'#A50CA8',
+                    position: top,
+                    imageWith: 600,
+                    imageHeigth: 400,
+                    background: "url(../assets/images/alertfondo.png)"
+                    })
+                    actualizarTotalesCarrito(carrito)
+                    pintarCarrito(carrito) 
+
             }
-            Swal.fire({
-                title: 'Felicitaciones!',
-                text: 'Su compra ha sido realizada',
-                icon:'success',
-                position: top,
-                imageWith: 600,
-                imageHeigth: 400,
-                background: "url(../assets/images/alertfondo.png)"
-                })
-                actualizarTotalesCarrito(carrito)
-        pintarCarrito(carrito) 
-        }
 
-    })
+        })
+
+    }
+
+
 })
 
 
