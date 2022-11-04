@@ -1,4 +1,4 @@
-//import { productos } from "./stock.js";
+import { productos } from "./stock.js";
 import { obtenerProductos } from "./obtenerProductos.js"
 
 let carritoDeCompras = []

@@ -45,13 +45,14 @@ const agregarAlCarrito = (productoId) => {
     const div = document.createElement('div');
     div.classList.add('productoEnCarrito');
     div.innerHTML = `<p>${producto.nombre}</p>
-                    <p>Precio: ${producto.precio}</p>
+                    <p>Precio: $ ${producto.precio}</p>
                     <p id=cantidad${producto.id}>Cantidad: ${producto.cantidad}</p>
                     <button id=eliminar${producto.id} value='${producto.id}' 
                     class='btn waves-effect waves-ligth boton-eliminar'>Eliminar</button>
                     `;
     contenedor.appendChild(div);
     actualizarTotalesCarrito(carrito);
+
 };
 
 // Pintar en el carrito
@@ -169,7 +170,7 @@ finalizarBoton.addEventListener('click', () => {
                     background: "url(../assets/images/alertfondo.png)"
                     })
                     actualizarTotalesCarrito(carrito)
-                    pintarCarrito(carrito) 
+                    pintarCarrito(carrito)
 
             }
 
